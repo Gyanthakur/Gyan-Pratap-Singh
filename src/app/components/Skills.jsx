@@ -41,7 +41,7 @@ const itemVariants = {
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen light:bg-white dark:bg-black light:text-black dark:text-white py-16 px-6">
+    <div className="min-h-screen light:bg-white dark:bg-black light:text-black dark:text-white py-6 px-6">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">🚀 My Tech Stack</h1>
 
       <motion.div
