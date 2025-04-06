@@ -134,7 +134,7 @@ export default function ProjectsPage() {
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 text-xs rounded light:bg-black/10 dark:bg-white/20 light:text-blue-800 dark:text-cyan-300"
+                    className="px-2 py-1 text-xs rounded light:bg-black/10 dark:bg-white/20 text-cyan-400"
                   >
                     {tech}
                   </span>

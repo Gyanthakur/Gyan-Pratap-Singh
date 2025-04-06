@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import SkillsPage from "./components/Skills";
 import ProjectsPage from "./projects/page";
+import Contact from "./contact/page";
+import About from "./about/page";
 
 export default function Home() {
   return (
@@ -10,8 +12,10 @@ export default function Home() {
       
     
       <Hero />
+      <About/>
       <SkillsPage/>
       <ProjectsPage/>
+      <Contact/>
     
     </div>
   );
