@@ -25,45 +25,15 @@ import {
 
 export default function About() {
 	return (
-		<section className="min-h-[125vh] w-full mt-16 relative">
-			{/* 3D Canvas */}
-			{/* <CanvasWrapper>
-				<Suspense fallback={null}>
-					<Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
-						<Text3D
-							font="/fonts/helvetiker_regular.typeface.json"
-							size={1}
-							height={0.3}
-							bevelEnabled
-							bevelThickness={0.03}
-							bevelSize={0.02}
-							bevelOffset={0}
-							bevelSegments={5}
-						>
-							About Me
-							<meshStandardMaterial color="#ff914d" />
-						</Text3D>
-					</Float>
-				</Suspense>
-
-				<OrbitControls
-					enableZoom={false}
-					autoRotate
-					autoRotateSpeed={1.5}
-					enablePan={false}
-					maxPolarAngle={Math.PI / 2}
-					minPolarAngle={Math.PI / 3}
-				/>
-			</CanvasWrapper> */}
-
-			{/* Overlay Content */}
+		<div className="min-h-[125vh] w-full relative">
+			
 			<div className="absolute top-0 left-0 h-full w-full flex justify-center items-center px-6 py-10 text-left z-10 light:bg-white/80 dark:bg-black/80 backdrop-blur overflow-y-auto scrollbar-hidden">
 				<div className="max-w-5xl light:text-gray-800 light:bg-white/80 dark:bg-black/80  dark:text-gray-700 space-y-10">
 					<h2 className="text-4xl md:text-5xl font-bold light:bg-white/80 dark:bg-black/80  text-orange-500 dark:text-orange-400 drop-shadow-lg">
 						# About me
 					</h2>
 
-					<p className="text-base sm:text-lg leading-relaxed text-justify">
+					<p className="text-base light:text-black dark:text-white sm:text-lg leading-relaxed text-justify">
 						I’m a full stack web developer from Uttar Pradesh, India with a
 						passion for crafting dynamic, immersive, and scalable web
 						experiences. With 2+ years of hands-on experience, I specialize in
@@ -74,7 +44,7 @@ export default function About() {
 						<h3 className="text-2xl font-semibold text-orange-600 dark:text-orange-400 mb-3">
 							⚙️ Core Technologies
 						</h3>
-						<p className="text-base sm:text-lg leading-relaxed text-justify mb-4">
+						<p className="text-base light:text-black dark:text-white sm:text-lg leading-relaxed text-justify mb-4">
 							My journey revolves around mastering key web technologies like:
 						</p>
 						<div className="flex flex-wrap gap-2 text-sm font-medium">
@@ -121,7 +91,7 @@ export default function About() {
 						<h3 className="text-2xl font-semibold text-orange-600 dark:text-orange-400 mb-2">
 							🌱 Exploring New Horizons
 						</h3>
-						<p className="text-base sm:text-lg text-justify">
+						<p className="text-base light:text-black dark:text-white sm:text-lg text-justify">
 							I'm always learning — whether it’s contributing to open-source
 							(Hacktoberfest Maintainer), building design tools, or
 							experimenting with 3D dev using Three.js and React Three Fiber.
@@ -134,7 +104,7 @@ export default function About() {
 						<h3 className="text-2xl font-semibold text-orange-600 dark:text-orange-400 mb-2">
 							🎓 Educational Pursuits
 						</h3>
-						<p className="text-base sm:text-lg text-justify">
+						<p className="text-base light:text-black dark:text-white sm:text-lg text-justify">
 							I'm currently pursuing a{" "}
 							<strong>B.Tech in Computer Science</strong> from Kamla Nehru
 							Institute of Technology, Sultanpur, maintaining a CGPA of{" "}
@@ -144,6 +114,6 @@ export default function About() {
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }
