@@ -51,11 +51,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+      <body className="  dark:bg-black  dark:text-white ">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
 
           <Navbar />
+          <div className="mt-10 mb-0">
+
           {children}
+          </div>
           <Footer />
         </ ThemeProvider>
       </body>
