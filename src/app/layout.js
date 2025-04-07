@@ -1,47 +1,35 @@
-// import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
 // import Navbar from "./components/Navbar";
 // import Footer from "./components/Footer";
-// import { Providers } from "./providers";
 // import { ThemeProvider } from "next-themes";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
 // export const metadata = {
-//   title: 'Gyan Pratap | Portfolio',
-//   description: '3D Animated Portfolio built with Next.js & Three.js',
+// 	title: "Gyan Pratap | Portfolio",
+// 	description: "3D Animated Portfolio built with Next.js & Three.js",
 // };
 
 // export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en" suppressHydrationWarning>
-//       <body>
-//         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
-//           <Navbar />
-//           {children}
-//           <Footer />
-//         </ThemeProvider>
-//       </body>
-//     </html>
-//   );
+// 	return (
+// 		<html lang="en" suppressHydrationWarning>
+// 			<body className="  dark:bg-black  dark:text-white ">
+// 				<ThemeProvider
+// 					attribute="class"
+// 					defaultTheme="light"
+// 					enableSystem={true}
+// 				>
+// 					<Navbar />
+// 					<div className="mt-10 mb-0">{children}</div>
+// 					<Footer />
+// 				</ThemeProvider>
+// 			</body>
+// 		</html>
+// 	);
 // }
 
-// layout.js
-
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { ThemeProvider } from "next-themes";
-
-
+import './globals.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata = {
   title: 'Gyan Pratap | Portfolio',
@@ -49,18 +37,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="  dark:bg-black  dark:text-white ">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
-
-          <Navbar />
-          <div className="mt-10 mb-0">
-
-          {children}
+      <head />
+      <body className=" dark:text-white ">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <div className="min-h-screen flex flex-col ">
+            <Navbar />
+            <main className="flex-grow mt-5 mb-0">
+              {children}
+            </main>
+            <Footer />
           </div>
-          <Footer />
-        </ ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
