@@ -12,7 +12,7 @@ const skills = [
   { name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
   { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
   { name: 'React', icon: <FaReact className="text-cyan-400" /> },
-  { name: 'Next.js', icon: <SiNextdotjs className="light:text-red-600 dark:text-black" /> },
+  { name: 'Next.js', icon: <SiNextdotjs className="text-red-400 dark:text-white" /> },
   { name: 'Tailwind', icon: <SiTailwindcss className="text-sky-400" /> },
   { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
   { name: 'Git', icon: <FaGitAlt className="text-red-500" /> },
@@ -39,10 +39,16 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-export default function SkillsPage() {
+export default function SkillsPage({ theme }) {
   return (
-    <div className="min-h-screen light:bg-white dark:bg-black light:text-black dark:text-white py-6 px-6">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">🚀 My Tech Stack</h1>
+    <div
+      className={`min-h-screen py-6 px-6 transition-colors duration-500 ${
+        theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'
+      }`}
+    >
+      <h1 className={`text-4xl ${
+        theme === 'dark' ? ' text-orange-500' : ' text-orange-600'
+      } md:text-5xl font-bold text-center mb-12`}>🚀 My Tech Stack</h1>
 
       <motion.div
         className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto"
@@ -53,7 +59,13 @@ export default function SkillsPage() {
         {skills.map((skill, index) => (
           <motion.div key={index} variants={itemVariants}>
             <Tilt glareEnable={true} glareMaxOpacity={0.3} scale={1.05}>
-              <div className="bg-black/5 dark:bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/10 shadow-xl transition hover:shadow-cyan-500/30">
+              <div
+                className={`rounded-xl p-6 text-center border shadow-xl transition hover:shadow-cyan-500/30 ${
+                  theme === 'dark'
+                    ? 'bg-white/10 border-white/10'
+                    : 'bg-black/5 border-black/10'
+                }`}
+              >
                 <div className="text-4xl mb-3">{skill.icon}</div>
                 <p className="text-sm font-semibold">{skill.name}</p>
               </div>
