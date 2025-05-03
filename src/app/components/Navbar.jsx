@@ -50,8 +50,9 @@ export default function Navbar() {
 				onClick={() => setActiveLink("/")}
 			>
 				<h1 className="text-2xl font-bold light:text-gray-800 dark:text-white transition-colors duration-300">
-					Gyan's{" "}
-					<span className="text-blue-600 dark:text-blue-400">Portfolio</span>
+					Gyan{" "}
+					<span className="text-blue-600 dark:text-blue-400">Pratap</span>
+					{" "}Singh
 				</h1>
 				<div className="absolute bottom-0 left-0 w-0 h-0.5 light:bg-blue-600 dark:bg-blue-400 group-hover:w-full transition-all duration-300"></div>
 			</Link>
